@@ -5,7 +5,7 @@
 let value: number = 5;
 
 const multipleInvalid = (x: number): number => {
-  value ++;
+  value ++; // Side effect
   return x * value;
 };
 
@@ -17,7 +17,7 @@ console.log('Invalid: ', multipleInvalid(25));
  */
 
 const multipleValid = (x: number, y: number): number => {
-  y++;
+  y++; // No side effect, however assignment to fn params is not recommended
   return x * y;
 };
 
